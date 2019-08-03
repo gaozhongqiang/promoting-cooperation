@@ -1,0 +1,18 @@
+{
+    "name": "promoting/cooperation",
+    "description": "合作中心",
+    "require": {
+        "php": ">=7.0"
+    },
+    "authors": [
+        {
+            "name": "gaozhongqiang",
+            "email": "1225000209@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Promoting\\Cooperation\\": ""
+        }
+    }
+}
