@@ -42,11 +42,11 @@ class Identity{
             unset($insert_log_data['last_edit_time'],$insert_log_data['approve_id'],$insert_log_data['alipay']);
             list($errorno,$errormess)=$_this->Promuser_approve_model->updateBatch($update_arr,$insert_log_data,$approve_id);
             if(0 != $errorno){
-                throw new \Exception($errormess);
+                throw new \Exception('驳回失败');
             }
             return array(0,'驳回成功');
         }catch (\Exception $exception){
-            return array(-1,'驳回失败');
+            return array(-1,$exception->getMessage());
         }
     }
     //首页html
